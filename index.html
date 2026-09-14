@@ -93,12 +93,19 @@
 
   @media (max-width: 800px) {
     html, body { height: auto; overflow: auto; }
-    body { display: block; }
-    .app.two-col { height: auto; }
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .app.two-col { height: auto; width: 100%; }
     .columns,
     .columns.converted {
       display: block;
       flex: none;
+      width: 100%;
     }
     .column,
     .column.settings-column {
